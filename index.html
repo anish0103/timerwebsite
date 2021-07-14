@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TiMer</title>
+    <link rel="stylesheet" href="./CSS/style.css">
+</head>
+
+<body>
+    <div class="section">
+        <div class="container">
+            <div>
+                <h1>Welcome to My TiMer</h1>
+            </div>
+        </div>
+        <div class="taketime">
+                <h3>Hour</h3><input type="text" id="iphr" placeholder="--" class="iptime"></input>
+                <h3>Minute</h3><input type="text" id="ipmin" placeholder="--" class="iptime"></input>
+                <h3>Second</h3><input type="text" id="ipsec" placeholder="--" class="iptime"></input>
+        </div>
+        <div>
+            <button id="start">Start</button>
+        </div>
+        <div class="showtime">
+            <div>
+                <h1>Showing Remaining Time</h1>
+            </div>
+            <div class="sotime">
+                <h2 class="timecontainer" id="shr">--</h2>
+                <h4 id="blink">:</h4>
+                <h2 class="timecontainer" id="smin">--</h2>
+                <h4 id="blink" >:</h4>
+                <h2 class="timecontainer" id="ssec">--</h2>
+            </div>
+        </div>
+    </div>
+    <script src="./JS/app.js"></script>
+</body>
+
+</html>
