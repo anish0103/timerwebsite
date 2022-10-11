@@ -6,14 +6,22 @@ let shr = document.getElementById("shr");
 let smin = document.getElementById("smin");
 let ssec = document.getElementById("ssec");
 let startbtn = document.getElementById("start");
+let showtimecontainer = document.getElementById("showtime");
+let taketimecontainer = document.getElementById("taketime");
 
 startbtn.addEventListener("click", start);
-let interval;
-// let b;
+let interval = null;
 
 function start() {
-interval = setInterval(startoperation, 1000);
-// b = setInterval(blinkbtn, 500);
+    if (interval === null) {
+        if (iphr.value.length === 0 || ipmin.value.length === 0 || ipsec.value.length === 0) {
+            return alert("Please Enter Hour, Minute and Second")
+        }
+        interval = setInterval(startoperation, 1000);
+        showtimecontainer.style.display = "flex";
+        taketimecontainer.style.display = "none";
+    }
+    // b = setInterval(blinkbtn, 500);
 }
 
 function startoperation() {
@@ -106,10 +114,16 @@ function playaudio() {
         'https://media.geeksforgeeks.org/wp-content/uploads/20190531135120/beep.mp3');
     audio.play();
     clearInterval(interval);
+    interval = null
+    shr.innerHTML = "00";
+    smin.innerHTML = "00";
+    ssec.innerHTML = "00";
+    showtimecontainer.style.display = "none";
+    taketimecontainer.style.display = "flex";
     // clearInterval(b);
     // if (shr.innerHTML == "--" && smin.innerHTML == "--" && ssec.innerHTML == "--") {
     //     alert("Your Time is over");
     // }
-    
+
     startbtn.innerHTML = "Start";
 }

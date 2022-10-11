@@ -1,129 +1,79 @@
-*{
-    margin: 0px 0px;
-    padding: 0px 0px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: normal;
+* {
+  margin: 0px 0px;
+  padding: 0px 0px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-
-.section{
-    background-color: #1a1a1a;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 100vh;
+.section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
 }
-
-.container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 32px 32px;
-    margin: 0px 32px;
-    width: 70%;
-    flex-direction: column;
+.taketime, .showtime {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 32px 32px;
+  margin: 0px 32px;
+  width: 40%;
+  height: 25%;
 }
-
-.taketime{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 32px 32px;
-    margin: 0px 32px;
-    width: 70%;
+.showtime {
+    display: none;
 }
-
-.iptime{
-    margin: 12px 12px;
-    padding: 12px 12px;
-    border-radius: 12px;
-    outline: none;
-    width: 5%;
-    text-align: center;
-    font-size: 20px;
+.taketime-subcontainer, .showtime-subcontainer {
+  width: 100%;
+  height: 100%;
+  margin: 0 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
-
-.showtime{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 32px 32px;
-    margin: 0px 32px;
-    width: 70%;
-    flex-direction: column;
+.taketime-subcontainer p, .showtime-subcontainer p {
+  font-size: 25px;
+  color: #86b2de;
+  font-weight: 500;
 }
-
-.sotime{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 15px 15px;
-    margin: 30px 30px;
-    background-color: #ca003b;
-    border-radius: 12px;
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
-
-#start{
-    padding: 7px 25px;
-    font-size: 20px;
-    border-radius: 12px;
-    outline: none;
-    border: none;
-    background-color: #ca003b;
-    cursor: pointer;
+input[type='number'] {
+  -moz-appearance: textfield;
 }
-
-h2{
-    background-color: white;
-    margin: 10px 25px;
-    padding: 20px 25px;
-    font-size: 30px;
-    border-radius: 12px;
+.taketime-subcontainer input, .showtime-value {
+  outline: none;
+  border: none;
+  padding: 15px;
+  width: 70%;
+  height: 100%;
+  margin: 10px 0;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  font-size: 35px !important;
+  color: #706f86 !important;
+  box-shadow: 0px 3px 10px -3px grey;
 }
-
-h4{
-    font-size: 32px;
-    display: block;
+.taketime-separator, .showtime-separator {
+  font-size: 35px;
+  position: relative;
+  top: 10px;
+  color: #86b2de;
 }
-
-h1, h3 {
-    text-align: center;
-    color: white;
-}
-
-@media screen and (max-width:450px) {
-    h1 {
-        font-size: 20px;
-    }
-    
-    h4{
-        font-size: 20px; 
-    }
-    
-    h2 {
-        margin: 10px 11px;
-        font-size: 20px;
-        width: 20%;
-        padding: 0;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    h3 {
-        font-size: 16px;   
-    }
-    
-    .sotime {
-        width: 85%;
-    }
-    
-    .iptime {
-        margin: 12px 10px;
-        padding: 10px 10px;
-        width: 15px;
-        height: 10px;
-        font-size: 12px;
-    }
+#start {
+  padding: 10px 30px;
+  font-size: 25px;
+  border-radius: 12px;
+  outline: none;
+  border: none;
+  color: white;
+  font-weight: 300;
+  background-color: #f24572;
+  cursor: pointer;
 }

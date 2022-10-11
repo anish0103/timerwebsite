@@ -1,43 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TiMer</title>
-    <link rel="stylesheet" href="./CSS/style.css">
-</head>
+    <link rel="stylesheet" href="./CSS/style.css" />
+  </head>
 
-<body>
+  <body>
     <div class="section">
-        <div class="container">
-            <div>
-                <h1>Welcome to My TiMer</h1>
-            </div>
+      <div id="taketime" class="taketime">
+        <div class="taketime-subcontainer">
+          <p>Hour</p>
+          <input type="number" id="iphr" placeholder="00" />
         </div>
-        <div class="taketime">
-                <h3>Hour</h3><input type="text" id="iphr" placeholder="--" class="iptime"></input>
-                <h3>Minute</h3><input type="text" id="ipmin" placeholder="--" class="iptime"></input>
-                <h3>Second</h3><input type="text" id="ipsec" placeholder="--" class="iptime"></input>
+        <p class="taketime-separator">:</p>
+        <div class="taketime-subcontainer">
+          <p>Minute</p>
+          <input type="number" id="ipmin" placeholder="00" />
         </div>
-        <div>
-            <button id="start">Start</button>
+        <p class="taketime-separator">:</p>
+        <div class="taketime-subcontainer">
+          <p>Second</p>
+          <input type="number" id="ipsec" placeholder="00" />
         </div>
-        <div class="showtime">
-            <div>
-                <h1>Showing Remaining Time</h1>
-            </div>
-            <div class="sotime">
-                <h2 class="timecontainer" id="shr">--</h2>
-                <h4 id="blink">:</h4>
-                <h2 class="timecontainer" id="smin">--</h2>
-                <h4 id="blink" >:</h4>
-                <h2 class="timecontainer" id="ssec">--</h2>
-            </div>
+      </div>
+
+      <div id="showtime" class="showtime">
+        <div class="showtime-subcontainer">
+          <p>Hour</p>
+          <p class="showtime-value" id="shr">00</p>
         </div>
+        <p class="showtime-separator">:</p>
+        <div class="showtime-subcontainer">
+          <p>Minute</p>
+          <p class="showtime-value" id="smin">00</p>
+        </div>
+        <p class="showtime-separator">:</p>
+        <div class="showtime-subcontainer">
+          <p>Second</p>
+          <p class="showtime-value" id="ssec">00</p>
+        </div>
+      </div>
+      <div>
+        <button id="start">Start</button>
+      </div>
     </div>
     <script src="./JS/app.js"></script>
-</body>
-
+  </body>
 </html>
